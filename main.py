@@ -2,13 +2,13 @@ import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QPainter, QColor, QPaintEvent
 from random import randint
-from UI import Ui_MainWindow
+from PyQt5 import uic
 
 
-class CircleCreator(QMainWindow, Ui_MainWindow):
+class CircleCreator(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setupUi(self)
+        uic.loadUi('UI.ui', self)
         self.pB_create_circle.clicked.connect(self.startPaint)
 
     def startPaint(self):
