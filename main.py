@@ -66,3 +66,5 @@ if __name__ == '__main__':
     ex = CircleCreator()
     ex.show()
     sys.exit(app.exec())
+
+dasasd
